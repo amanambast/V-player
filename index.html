@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aman Player</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">▶ AMAN PLAYER</div>
+    <button id="themeBtn">🌙</button>
+</header>
+
+<div class="container">
+
+    <div class="welcome">
+        <h1>Video Player</h1>
+        <p>Your personal entertainment space.</p>
+    </div>
+
+    <div class="toolbar">
+        <input type="text" id="search" placeholder="Search videos...">
+        <label class="upload">
+            + Add Videos
+            <input type="file" id="fileInput" accept="video/*" multiple hidden>
+        </label>
+    </div>
+
+    <section class="player-section">
+
+        <video id="video" playsinline></video>
+
+        <div class="video-title" id="videoTitle">
+            Select a video to start
+        </div>
+
+        <div class="controls">
+            <button id="back">↶ 10s</button>
+            <button id="play">▶</button>
+            <button id="forward">10s ↷</button>
+            <button id="fullscreen">⛶</button>
+        </div>
+
+        <div class="settings">
+            <label>Volume
+                <input type="range" id="volume" min="0" max="1" step="0.05" value="1">
+            </label>
+
+            <label>Speed
+                <select id="speed">
+                    <option value="0.5">0.5x</option>
+                    <option value="0.75">0.75x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="1.25">1.25x</option>
+                    <option value="1.5">1.5x</option>
+                    <option value="2">2x</option>
+                </select>
+            </label>
+
+            <label>Subtitle
+                <input type="file" id="subtitle" accept=".vtt">
+            </label>
+        </div>
+
+    </section>
+
+    <h2>My Videos</h2>
+
+    <div id="videoList" class="video-list">
+        <p class="empty">No videos added yet.</p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
